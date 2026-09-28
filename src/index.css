@@ -9,16 +9,95 @@ body,
 #root {
   width: 100%;
   height: 100%;
+  background-color: #1e1e24;
+  color: #2b2b2b;
+  font-family: 'Georgia', serif;
+  user-select: none;
   overflow: hidden;
-  background-color: #242424;
-  color: #f3f3f3;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .canvas-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100vw;
   height: 100vh;
+  gap: 1.5rem;
+}
+
+.book-app-header {
+  text-align: center;
+  color: #e0e0e0;
+}
+
+.book-app-header h1 {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+.book-app-header p {
+  font-size: 0.9rem;
+  color: #a0a0a0;
+  margin-top: 0.25rem;
+}
+
+.book-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1500px;
+}
+
+/* Contenedor de cada hoja */
+.page-sheet {
+  background-color: #fcf9f2;
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  overflow: hidden;
+}
+
+.page-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 1.8rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.page-header h3 {
+  font-size: 1.3rem;
+  color: #333;
+  border-bottom: 2px solid #eae5d9;
+  padding-bottom: 0.5rem;
+}
+
+.page-placeholder-art {
+  width: 100%;
+  height: 190px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-family: sans-serif;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.2rem;
+}
+
+.page-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.page-footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #888;
+  font-family: sans-serif;
+  border-top: 1px solid #eae5d9;
+  padding-top: 0.5rem;
 }
