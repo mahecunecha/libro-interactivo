@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import HTMLFlipBook from 'react-pageflip';
 import { mockPages } from '../assets/mockData';
 import { PageRenderer } from './PageRenderer';
+import { useBookSound } from '../hooks/useBookSound';
 
 interface BookContainerProps {
     onPageChange?: (newPage: number) => void;
@@ -9,8 +10,12 @@ interface BookContainerProps {
 
 export const BookContainer: React.FC<BookContainerProps> = ({ onPageChange }) => {
     const bookRef = useRef<any>(null);
+    const { playPaperTurn } = useBookSound();
 
     const handleFlip = (e: { data: number }) => {
+        // Disparo inmediato del efecto sonoro con latencia mínima
+        playPaperTurn();
+
         if (onPageChange) {
             onPageChange(e.data);
         }
