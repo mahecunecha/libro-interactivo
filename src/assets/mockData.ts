@@ -3,31 +3,36 @@ export interface BookPage {
     title: string;
     content: string;
     imagePlaceholderColor: string;
+    audioSrc?: string; // Ruta al archivo de audio grabado
 }
 
 export const mockPages: BookPage[] = [
     {
         id: 1,
-        title: 'Portada',
-        content: 'Título provisional de la obra interactiva.',
-        imagePlaceholderColor: '#3a3a3a',
+        title: 'Cover',
+        content: 'Interactive English Reader. Narration by Sergio.',
+        imagePlaceholderColor: '#2c3e50',
+        audioSrc: '', // Dejar en blanco mientras grabas o enlazar archivo de prueba
     },
     {
         id: 2,
-        title: 'Página 1',
-        content: 'Texto de prueba para validar el diseño y flujo de lectura.',
-        imagePlaceholderColor: '#4a4a4a',
+        title: 'Chapter 1: The Beginning',
+        content: 'Once upon a time, in a small town surrounded by dense green hills, an unexpected journey began.',
+        imagePlaceholderColor: '#34495e',
+        audioSrc: '',
     },
     {
         id: 3,
-        title: 'Página 2',
-        content: 'Contenido adicional para verificar las físicas de giro de hoja.',
-        imagePlaceholderColor: '#5a5a5a',
+        title: 'Chapter 2: The Discovery',
+        content: 'Walking through the quiet forest path, a mysterious stone structure emerged from the thick morning fog.',
+        imagePlaceholderColor: '#16a085',
+        audioSrc: '',
     },
     {
         id: 4,
-        title: 'Contraportada',
-        content: 'Fin de la demostración.',
-        imagePlaceholderColor: '#2b2b2b',
+        title: 'End of Chapter',
+        content: 'Thank you for listening. End of submission.',
+        imagePlaceholderColor: '#2c3e50',
+        audioSrc: '',
     },
 ];
